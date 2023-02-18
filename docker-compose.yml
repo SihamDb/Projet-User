@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+
+  react-app:
+    build: reactapp
+    ports:
+      - "3000:3000"
+
+  springboot-api:
+    build: projetapi
+    ports:
+      - "8080:8080"
+
+  oracle:
+    image: oracleinanutshell/oracle-xe-11g
+    ports:
+      - "1521:1521"
